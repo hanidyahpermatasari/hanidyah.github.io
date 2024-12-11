@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffe6f2; /* Magenta lembut sebagai latar belakang */
+  font-family: 'Comic Sans MS', Arial, sans-serif;
+  line-height: 1.6;
+  color: #4d004d; /* Magenta gelap untuk teks */
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem; /* Sedikit meningkatkan padding */
+  background: #fff0f5; /* Latar putih magenta */
+  border-radius: 25px; /* Lebih halus */
+  box-shadow: 0px 6px 14px rgba(255, 0, 127, 0.5); /* Menambahkan dimensi */
+}
+
+.masthead,
+.intro,
+.news-section {
+  padding: 1.5rem;
+  border-radius: 25px;
+  box-shadow: 0px 6px 14px rgba(255, 0, 127, 0.5); /* Sama untuk semua */
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.site-avatar img {
+  width: 90px; /* Sedikit lebih besar */
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 6px 12px rgba(255, 0, 127, 0.5);
+  animation: fadeIn 1s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.site-avatar img:hover {
+  box-shadow: 0px 6px 12px rgba(255, 0, 127, 0.8);
+  transform: scale(1.3) rotate(360deg); /* Mengurangi skala hover */
+}
+
+.site-info {
+  margin-left: 1rem;
+}
+
+.site-name {
+  font-size: 2.8rem; /* Lebih besar */
+  color: #ff00aa; /* Magenta terang untuk nama situs */
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(255, 0, 127, 0.4); /* Menambahkan bayangan */
+}
+
+.site-description {
+  font-size: 1.2rem;
+  color: #ff66cc; /* Magenta pastel untuk deskripsi */
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #ff00aa;
+  font-weight: 500;
+  position: relative;
+  font-size: 1.1rem; /* Menambahkan sedikit ukuran font */
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ff00aa;
+  bottom: -4px; /* Mengubah posisi underlining */
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff66cc; /* Magenta pastel */
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.intro {
+  text-align: center;
+  padding: 2.5rem 1.5rem; /* Sedikit lebih besar */
+  background: linear-gradient(135deg, #ffb3d9, #ffe6f2); /* Gradien untuk latar */
+  border-radius: 25px;
+  box-shadow: 0px 6px 14px rgba(255, 0, 127, 0.5);
+}
+
+.intro h1 {
+  font-size: 3.2rem; /* Lebih besar */
+  margin-bottom: 1.2rem;
+  color: #ff00aa;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4d004d;
+  margin-bottom: 1.8rem;
+}
+
+.intro img {
+  width: 65%; /* Sedikit lebih besar */
+  max-width: 320px;
+  position: relative;
+  top: 20px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0px 6px 14px rgba(255, 0, 127, 0.6);
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.intro img:hover {
+  transform: scale(1.4) rotate(10deg); /* Efek hover lebih halus */
+}
+
+.news-section {
+  background: #ffe6f2; /* Magenta lembut */
+  margin-top: 2.5rem;
+}
+
+.news-section h1 {
+  font-size: 2.8rem; /* Lebih besar */
+  margin-bottom: 1.2rem;
+  color: #ff00aa;
+}
+
+.news-section p {
+  font-size: 1.3rem; /* Meningkatkan ukuran teks */
+  text-align: justify;
+  line-height: 1.8;
+  color: #4d004d;
+  margin-bottom: 1.8rem;
+}
+
+.news-entry a {
+  font-size: 1.5rem;
+  color: #ff00aa;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.news-entry a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ff00aa;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.news-entry a:hover {
+  color: #ff66cc;
+}
+
+.news-entry a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #ff66cc;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.news-entry p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.preview-img {
+  overflow: hidden;
+  border-radius: 25px;
+  width: 85%; /* Sedikit lebih besar */
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 6px 14px rgba(255, 0, 127, 0.4);
+  animation: fadeIn 1s ease;
+}
+
+.go-back-button {
+  display: inline-block;
+  background-color: #ff00aa;
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Lebih besar */
+  font-size: 1.1rem; /* Lebih besar */
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(255, 0, 127, 0.6);
+  transition: background-color 0.3s ease;
+  margin-top: 25px;
+}
+
+.go-back-button:hover {
+  background-color: #ff66cc;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wiki1 {
+  color: #ff00aa;
+ 
